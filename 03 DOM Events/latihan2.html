@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latihan JavaScript dengan warna</title>
+  <style>
+    *{
+      text-align: center;
+    }
+    .kotak{
+      width: 1rem;
+      height: 1rem;
+      margin: 10px auto;
+    }
+    .merah{
+      background-color: red;
+    }
+    .hijau{
+      background-color: green;
+    }
+    .biru{
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>ini adalah latihan JavaScript mengolah warna</h1>
+  <div class="kotak merah"></div>
+  <input type="range" name="sMerah" min="0" max="255">
+  <div class="kotak hijau"></div>
+  <input type="range" name="sHijau" min="0" max="255">
+  <div class="kotak biru"></div>
+  <input type="range" name="sBiru" min="0" max="255">
+
+  <script>
+    const sMerah = document.querySelector("input[name=sMerah]")
+    const sHijau = document.querySelector("input[name=sHijau]")
+    const sBiru = document.querySelector("input[name=sBiru]")
+
+    sMerah.addEventListener("input", function(){
+      const Red = sMerah.value;
+      const Green = sHijau.value;
+      const Blue = sBiru.value;
+      document.body.style.backgroundColor = "rgb("+Red+","+Green+","+Blue+")"
+    })
+    sHijau.addEventListener("input", function(){
+      const Red = sMerah.value;
+      const Green = sHijau.value;
+      const Blue = sBiru.value;
+      document.body.style.backgroundColor = "rgb("+Red+","+Green+","+Blue+")"
+    })
+    sBiru.addEventListener("input", function(){
+      const Red = sMerah.value;
+      const Green = sHijau.value;
+      const Blue = sBiru.value;
+      document.body.style.backgroundColor = "rgb("+Red+","+Green+","+Blue+")"
+    })
+  </script>
+</body>
+</html>
