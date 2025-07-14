@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latihan Kalkulator dengan DOM Event</title>
+</head>
+<body>
+  <h2>Calculator with JavaScript</h2>
+  <div class="container">
+    <div class="bilangan1">
+      <label for="bilangan1">Bilangan 1:</label>
+      <input type="number" id="bilangan1">
+    </div>
+    <div class="operator">
+      <label for="operator">Operator:</label>
+      <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+    <div class="bilangan2">
+      <label for="bilangan2">Bilangan 2:</label>
+      <input type="number" id="bilangan2">
+    </div>
+    <div class="tombol">
+      <button id="hitung">Hitung</button>
+    </div>
+    <div class="hasil">
+      <h3>Hasil:</h3>
+      <p id="output">0</p>
+    </div>
+
+  </div>
+  <script>
+    let bilangan1 = document.getElementById('bilangan1');
+    let bilangan2 = document.getElementById('bilangan2');
+    let operator = document.getElementById('operator');
+    let hitungButton = document.getElementById('hitung');
+    let output = document.getElementById('output');
+
+    hitungButton.addEventListener('click',function(){
+      let num1 = parseInt(bilangan1.value);
+      let num2 = parseInt(bilangan2.value);
+      let op = operator.value;
+      let result;
+
+      switch (op) {
+        case '+':
+          result = num1 + num2;
+          break;
+        case '-':
+          result = num1 - num2;
+          break;
+        case '*':
+          result = num1 * num2;
+          break;
+        case '/':
+          result = num1 / num2;
+          break;
+        default:
+          result = 0;
+      }
+
+      output.textContent = result;
+    });
+  </script>
+</body>
+</html>
