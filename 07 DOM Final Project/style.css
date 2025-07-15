@@ -1,0 +1,42 @@
+:root{
+  --main-color : rgb(206, 192, 192);
+  --black-color : rgb(33, 36, 46);
+  --light-color : rgb(139, 157, 218);
+  --border-color : rgb(150, 149, 247);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+body {
+  background: var(--main-color);
+  text-align: center;
+}
+
+.container{
+  width: 600px;
+  margin: 10px auto;
+  border: 3px solid var(--border-color);
+}
+
+img{
+  object-fit:cover;
+  background-position: center;
+  background-size: cover;
+}
+
+.thumb{
+  width: 200px;
+  height: 200px;
+  border: 1px solid var(--border-color);
+  margin: 2px;
+  border-radius: 5px;
+}
+
+.thumb:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
