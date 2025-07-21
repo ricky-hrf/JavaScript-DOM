@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>latihan get value</title>
+</head>
+<body>
+  <input type="text" id="inputText" placeholder="Type something here...">
+  <button id="getValueButton">Get Value</button>
+  <p id="displayText"></p>
+<br>
+  <input type="number" id="inputNumber" placeholder="Type a number here...">
+  <button id="getNumberButton">Get Number</button>
+  <p id="displayNumber"></p>
+
+  <!-- perhitungan sederhana -->
+  <h2>Perhitungan Sederhana</h2>
+  <input type="number" id="inputAngka1" placeholder="Angka Pertama">
+  <label for="operator">Operator</label>
+  <select name="operator" id="operator">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+  <input type="number" id="inputAngka2" placeholder="Angka Kedua">
+  <button id="tombolHitung">Hitung</button>
+  <input type="text" id="hasilPerhitungan" placeholder="Hasil Perhitungan" disabled>
+  <script>
+    const button = document.getElementById('getValueButton');
+    button.addEventListener('click', () => {
+      const inputValue = document.getElementById('inputText').value;
+      document.getElementById('displayText').innerText = inputValue;
+    });
+
+    const angka = document.getElementById('inputNumber');
+    const tombol = document.getElementById('getNumberButton');
+    const hasil = document.getElementById('displayNumber');
+    tombol.addEventListener("click", function(){
+      const valueNumber = angka.value;
+      hasil.innerText = valueNumber;
+    })
+
+    const inputAngka1 = document.getElementById('inputAngka1');
+    const inputAngka2 = document.getElementById('inputAngka2');
+    const tombolHitung = document.getElementById('tombolHitung');
+    tombolHitung.addEventListener('click', () => {
+      const angka1 = parseFloat(inputAngka1.value);
+      const angka2 = parseFloat(inputAngka2.value);
+      const operator = document.getElementById('operator').value;
+      const hasilPerhitungan = document.getElementById('hasilPerhitungan');
+      let hasil;
+
+      if (operator === '+') {
+        hasil = angka1 + angka2;
+      } else if (operator === '-') {
+        hasil = angka1 - angka2;
+      } else if (operator === '*') {
+        hasil = angka1 * angka2;
+      } else if (operator === '/') {
+        hasil = angka1 / angka2;
+      } else {
+        hasil = 'Invalid operator';
+      }
+
+      hasilPerhitungan.value = hasil;
+    });
+
+
+      // switch (operator) {
+      //   case '+':
+      //     hasilPerhitungan = angka1 + angka2;
+      //     break;
+      //   case '-':
+      //     hasilPerhitungan = angka1 - angka2;
+      //     break;
+      //   case '*':
+      //     hasilPerhitungan = angka1 * angka2;
+      //     break;
+      //   case '/':
+      //     hasilPerhitungan = angka1 / angka2;
+      //     break;
+      //   default:
+      //     hasilPerhitungan = 'Invalid operator';
+      // }
+
+    //   hasil.value = hasil;
+    // });
+
+  </script>
+</body>
+</html>
