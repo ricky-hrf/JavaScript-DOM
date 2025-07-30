@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>latihan 2</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  
+    body {
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+  
+    .product-card {
+      width: 300px;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+  
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+  
+    .product-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+  
+    .product-info {
+      padding: 20px;
+    }
+  
+    .product-name {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 10px;
+    }
+  
+    .product-description {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+  
+    .product-price {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #2ecc71;
+    }
+  
+    .old-price {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 1rem;
+      margin-left: 8px;
+    }
+  
+    .badge {
+      background-color: #e74c3c;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="product-card">
+    <img src="gambar.png" alt="Nama Produk" class="product-image">
+    <div class="product-info">
+      <h2 class="product-name">Smartphone XYZ</h2>
+      <p class="product-description">
+        Smartphone canggih dengan kamera 48MP, baterai 5000mAh, dan layar AMOLED 6.5 inci.
+        Cocok untuk gaming dan fotografi.
+      </p>
+      <div>
+        <span class="product-price">Rp 4.999.000</span>
+        <span class="old-price">Rp 5.500.000</span>
+        <span class="badge">Diskon 10%</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
